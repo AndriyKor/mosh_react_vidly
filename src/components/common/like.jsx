@@ -1,12 +1,12 @@
 import React from "react";
 
-const Like = props => {
+const Like = ({ liked, onToogleLike }) => {
   let classes = "fa fa-heart";
-  if (!props.liked) classes += "-o";
+  if (!liked) classes += "-o";
 
   return (
     <i
-      onClick={props.onToogleLike}
+      onClick={onToogleLike}
       className={classes}
       style={{ cursor: "pointer" }}
       aria-hidden="true"

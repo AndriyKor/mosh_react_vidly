@@ -2,8 +2,7 @@ import React from "react";
 import _ from "lodash";
 import PropTypes from "prop-types";
 
-const Pegination = props => {
-  const { itemCount, pageSize, currentPage, onPageChange } = props;
+const Pegination = ({ itemCount, pageSize, currentPage, onPageChange }) => {
   const pageCount = Math.ceil(itemCount / pageSize);
   if (pageCount === 1) return null;
   const pages = _.range(1, pageCount + 1);
@@ -19,7 +18,11 @@ const Pegination = props => {
               }
               key={page}
             >
-              <a onClick={() => onPageChange(page)} className="page-link">
+              <a
+                onClick={() => onPageChange(page)}
+                className="page-link"
+                href="!#"
+              >
                 {page}
               </a>
             </li>
