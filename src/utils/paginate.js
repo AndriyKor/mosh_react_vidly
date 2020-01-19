@@ -5,6 +5,5 @@ export function paginate(items, pageNumber, pageSize) {
   return _(items)
     .slice(startIndex)
     .take(pageSize)
-    .take(pageSize)
     .value();
 }
